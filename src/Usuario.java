@@ -1,63 +1,29 @@
-import java.util.Scanner;
-
 public class Usuario {
-    public static void main(String[] args) {
+    private String nome;
+    private String cpf;
+    private String email;
 
-        Scanner ler = new Scanner(System.in);
+    public String getNome() {
+        return nome;
+    }
 
-        System.out.println("------------------------------");
-        System.out.println("----------Bem Vind@!!---------");
-        System.out.println("------------------------------");
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-        int menu = 0;
+    public String getCpf() {
+        return cpf;
+    }
 
-        System.out.println("----------- ECOLHA -----------");
-        System.out.println("------1 - NOVO POR AQUI-------");
-        System.out.println("----- 2 - JA TENHO CADASTRO---");
-        System.out.println("------------------------------");
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 
-        String escolha;
-        System.out.print("Escolha um dos números: ");
-        escolha = ler.next();
+    public String getEmail() {
+        return email;
+    }
 
-
-        switch (menu) {
-
-            case 1:
-                System.out.print("Nome do novo discente:");
-                System.out.print("CPF:");
-                System.out.print("E-mail:");
-                break;
-
-
-            case 2:
-                String cpfDigitado;
-                System.out.print("Digte seu CPF: ");
-                cpfDigitado = ler.next();
-                if (cpfDigitado.equals(cpfDigitado)) {
-                    System.out.println("CPF Correto");
-                    System.out.println("Tela de acesso permitido");
-                    System.out.println("------------------------");
-                } else {
-                    System.out.println("CPF Incorreto");
-                    System.out.println("Tela de acesso não permitido");
-                    System.out.println("-----------------------------");
-                    System.exit(0);
-                }
-        }
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
-
-
-//		SEGUNDA PARTE AINDA ELABORANDO.
-
-//		System.out.println("------------ MENU ------------");
-//		System.out.println("--- 1 - Cadastro alun@ -------");
-//		System.out.println("--- 2 - Cursos disponíveis ---");
-//		System.out.println("--- 3 - Nome Professores -----");
-//		System.out.println("--- 0 - Sair -----------------");
-//		System.out.println("------------------------------");a
-//
-//
-//		}
-
