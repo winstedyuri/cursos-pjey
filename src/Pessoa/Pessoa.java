@@ -1,7 +1,9 @@
-public class Usuario {
+package Pessoa;
+
+public class Pessoa {
     private String nome;
     private String cpf;
-    private String email;
+    private String dataNascimento;
 
     public String getNome() {
         return nome;
@@ -19,11 +21,11 @@ public class Usuario {
         this.cpf = cpf;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 }
