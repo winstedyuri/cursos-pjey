@@ -19,4 +19,10 @@ public class Usuario extends Pessoa{
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    public Usuario(String email, String senha) {
+        this.email = email;
+        this.senha = senha;
+    }
+
 }
