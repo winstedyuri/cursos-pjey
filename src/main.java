@@ -13,6 +13,5 @@ public class main {
 
         System.out.println(u2.getSenha()); //Aqui estou acessando o atributo senha da class usuario.
         System.out.println(u2.getEmail());
-
     }
 }
