@@ -1,9 +1,10 @@
 package Pessoa;
+import java.util.Date;
 
 public class Pessoa {
     private String nome;
     private String cpf;
-    private String dataNascimento;
+    private Date dataNascimento;
 
     public String getNome() {
         return nome;
@@ -21,11 +22,11 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public String getDataNascimento() {
+    public Date getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
