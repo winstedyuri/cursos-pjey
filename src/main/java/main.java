@@ -27,7 +27,7 @@ public class main {
         } catch (ClassNotFoundException ex) {
             System.out.println("Driver de banco de dados não localizado.");
         } catch (SQLException ex) {
-            System.out.println("DOcorreu um erro ao acessar o banco: " + ex.getMessage());
+            System.out.println("Ocorreu um erro ao acessar o banco: " + ex.getMessage());
         } finally {
             if (conexao != null) {
                 conexao.close();
@@ -42,7 +42,8 @@ public class main {
 
 
         System.out.println(u2.getEmail() +" - "+ u1.getEmail() + " - "+ u3.getEmail());
-        System.out.println(u2.getSenha()); //Aqui estou acessando o atributo senha da class usuario.
+        //Aqui estou acessando o atributo senha da class usuario.
+        System.out.println(u2.getSenha());
 
     }
 }
