@@ -28,9 +28,12 @@ class CadastroPessoa {
             listaDePessoas.add(pessoa);
             pessoa = new Pessoa();
 
-            System.out.println("Digite 1 para cadastrar usuários ou 0 para sair !");
+            System.out.println("Ok. Uma pessoa foi adicionada no nosso cadastro.\nDigite 1 para cadastrar mais usuários ou 0 para sair !");
             op = scanner.nextInt();
-            break;
+
+            if (op == 0) {
+                break;
+            }
         }
     }
 }
