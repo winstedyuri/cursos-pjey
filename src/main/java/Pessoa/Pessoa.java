@@ -14,7 +14,7 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public String getCpf() {
+    public String getCpf(String s) {
         return cpf;
     }
 
@@ -22,7 +22,7 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public Date getDataNascimento() {
+    public Date getDataNascimento(String s) {
         return dataNascimento;
     }
 
