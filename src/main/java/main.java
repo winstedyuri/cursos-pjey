@@ -1,49 +1,37 @@
-import Pessoa.Usuario;
-import Produto.Eletronico;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import jdk.jfr.internal.tool.Main;
+import java.util.List;
+import Pessoa.Pessoa;
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class main {
-    public static void main(String[] args) throws SQLException {
+class CadastroPessoa {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList listaDePessoas = new ArrayList();
+        Pessoa pessoa = new Pessoa();
+        int op = 0;
 
-        // cria var
-        Connection conexao = null;
+        System.out.println("Bem vind@\n Digite 1 para cadastrar usuário ou 0 para sair:");
+        op = scanner.nextInt();
 
-        try {
-            Class.forName("com.myslq.jdbc.Driver");
-            conexao = DriverManager.getConnection("jbdc:mysql://localhost/banco","usuario","senha");
-            //Retorna consulta
-            ResultSet rsCliente = conexao.createStatement().executeQuery(("SELECT * FROM CLIENTE"));
-            //Podendo consultar as informações cliente.
-            while (rsCliente.next()) {
-                System.out.println("Nome: " + rsCliente.getString("nome"));
-            }
+        while (op != 0) {
+            System.out.println("Bem vindo ao sistema de cadastros de usuários");
+            System.out.println("Digite o nome do usuário");
+            pessoa.setNome(scanner.nextLine());
 
+            System.out.println("Digite seu CPF");
+            pessoa.getCpf(scanner.nextLine());
 
-        } catch (ClassNotFoundException ex) {
-            System.out.println("Driver de banco de dados não localizado.");
-        } catch (SQLException ex) {
-            System.out.println("Ocorreu um erro ao acessar o banco: " + ex.getMessage());
-        } finally {
-            if (conexao != null) {
-                conexao.close();
-            }
+            System.out.println("Digite a data de nascimento:");
+            pessoa.getDataNascimento(scanner.nextLine());
+
+            listaDePessoas.add(pessoa);
+            pessoa = new Pessoa();
+
+            System.out.println("Digite 1 para cadastrar usuários ou 0 para sair !");
+            op = scanner.nextInt();
+            break;
         }
-
-        Scanner ler = new Scanner(System.in);
-        Usuario u1 = new Usuario("yuri@nexti.com", "teste12345");
-        Usuario u2 = new Usuario("joabefilipe@gmail.com", "senhausuario2");
-        Usuario u3 = new Usuario("patrick@kcirtap.com", "4321");
-        Usuario u4 = new Usuario("manu021rj@gmail.com", "12345");
-
-
-        System.out.println(u2.getEmail() +" - "+ u1.getEmail() + " - "+ u3.getEmail());
-        //Aqui estou acessando o atributo senha da class usuario.
-        System.out.println(u2.getSenha());
-
     }
 }
+
